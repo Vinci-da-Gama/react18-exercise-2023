@@ -6,19 +6,27 @@
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
-    }
+    },
+    "project": "./tsconfig.json"
   },
   "plugins": ["@typescript-eslint", "prettier"],
   "extends": [
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "airbnb-typescript",
+    "prettier",
+    "plugin:@typescript-eslint/recommended", // this one must below "prettier"
+    "prettier/@typescript-eslint",
+    "prettier/react"
   ],
   "rules": {
     "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
     "react/react-in-jsx-scope": "off",
-    "@typescript-eslint/explicit-module-boundary-types": "off"
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "no-param-reassign": "off"
   },
   "settings": {
     "react": {
