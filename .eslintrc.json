@@ -17,7 +17,6 @@
     "airbnb-typescript",
     "prettier",
     "plugin:@typescript-eslint/recommended", // this one must below "prettier"
-    "prettier/@typescript-eslint",
     "prettier/react"
   ],
   "rules": {
